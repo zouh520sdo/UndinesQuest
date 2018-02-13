@@ -26,6 +26,7 @@ public class moveforward : MonoBehaviour {
             if (collision.gameObject.GetComponent<Enemy>().type == Enemy.EnemyType.Sediment)
             {
                 Debug.Log("melee hit");
+                collision.gameObject.GetComponent<Enemy>().TakeDamage(1000f);
             }
 
         }
@@ -34,6 +35,7 @@ public class moveforward : MonoBehaviour {
             if (collision.gameObject.GetComponent<Enemy>().type == Enemy.EnemyType.Bacteria)
             {
                 Debug.Log("range hit");
+                collision.gameObject.GetComponent<Enemy>().TakeDamage(1000f);
                 Destroy(gameObject);
             }
 
