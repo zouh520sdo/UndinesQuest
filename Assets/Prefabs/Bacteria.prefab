@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4834651422485310}
   - component: {fileID: 114858101408599918}
   - component: {fileID: 212569519923692252}
+  - component: {fileID: 58988493861421640}
   m_Layer: 0
   m_Name: Bacteria
   m_TagString: Untagged
@@ -41,6 +42,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58988493861421640
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1997890463846314}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!114 &114858101408599918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57,6 +73,7 @@ MonoBehaviour:
   type: 0
   player: {fileID: 0}
   lifeTime: 0
+  speed: 2
 --- !u!212 &212569519923692252
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -91,13 +108,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: f7c4a428ad3cf1f44ab9867354a3aeb5, type: 3}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
