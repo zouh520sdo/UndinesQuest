@@ -4,8 +4,19 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public Enemy.EnemyType spawnType;
+    public float spawnInterval;
+
+    public GameObject[] enemyPrefabs;
+
+    void Awake()
+    {
+        tag = "Spawner";
+
+    }
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
