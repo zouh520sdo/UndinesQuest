@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour {
         Nuclear
     }
 
-    public float health;
+    public float HP;
     public float damage;
     public EnemyType type;
     public GameObject player;
@@ -39,4 +39,13 @@ public class Enemy : MonoBehaviour {
             transform.Translate(targetV.normalized * speed * Time.deltaTime);
         }
 	}
+
+    public void TakeDamage(float d)
+    {
+        HP -= d;
+        if (HP <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
