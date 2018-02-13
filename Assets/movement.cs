@@ -32,7 +32,7 @@ public class movement : MonoBehaviour {
         
         moveDirection.y = Input.GetAxisRaw("Vertical");
         moveDirection.x = Input.GetAxisRaw("Horizontal");
-        Debug.Log(Quaternion.LookRotation(moveDirection.normalized));
+        //Debug.Log(Quaternion.LookRotation(moveDirection.normalized));
         transform.Translate(moveDirection * speed * Time.deltaTime);
         Vector2 moveDirection2 = moveDirection.normalized;
         float angle = Mathf.Atan2(moveDirection2.y, moveDirection2.x) * Mathf.Rad2Deg;

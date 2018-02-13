@@ -6,6 +6,7 @@ public class moveforward : MonoBehaviour {
     public float speed;
     public float life = 4f;
     private float lifetime = 0;
+    
 	// Use this for initialization
 	void Start () {
 		
@@ -18,4 +19,26 @@ public class moveforward : MonoBehaviour {
         transform.position += transform.right * Time.deltaTime * speed;
 
 	}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (gameObject.tag == "sword")
+        {
+            if (collision.gameObject.GetComponent<Enemy>().type == Enemy.EnemyType.Sediment)
+            {
+                Debug.Log("melee hit");
+            }
+
+        }
+        if (gameObject.tag == "projectile")
+        {
+            if (collision.gameObject.GetComponent<Enemy>().type == Enemy.EnemyType.Bacteria)
+            {
+                Debug.Log("range hit");
+                Destroy(gameObject);
+            }
+
+        }
+    }
+    
+    
 }

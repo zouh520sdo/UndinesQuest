@@ -6,6 +6,8 @@ TagManager:
   tags:
   - sword
   - projectile
+  - Enemy
+  - Spawner
   layers:
   - Default
   - TransparentFX
