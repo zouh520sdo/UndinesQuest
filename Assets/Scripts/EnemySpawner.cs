@@ -6,8 +6,9 @@ public class EnemySpawner : MonoBehaviour {
 
     public Enemy.EnemyType spawnType;
     public float spawnInterval;
-
+    public bool canSpawn;
     public GameObject[] enemyPrefabs;
+    public EnemyManager enemyManager;
 
     private float timestamp;
     private SpriteRenderer sprite;
@@ -17,22 +18,38 @@ public class EnemySpawner : MonoBehaviour {
         tag = "Spawner";
         sprite = GetComponent<SpriteRenderer>();
         sprite.enabled = false;
+        enemyManager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
     }
 
     // Use this for initialization
     void Start () {
+        if (enemyManager)
+        {
+            enemyManager.spawnerList.Add(this);
+        }
         timestamp = Time.time;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Time.time - timestamp > spawnInterval)
+        if (canSpawn)
         {
-            // Spawn
-            Spawn();
-            timestamp = Time.time;
+            if (Time.time - timestamp > spawnInterval)
+            {
+                // Spawn
+                Spawn();
+                timestamp = Time.time;
+            }
         }
 	}
+
+    void OnDestroy()
+    {
+        if (enemyManager)
+        {
+            enemyManager.spawnerList.Remove(this);
+        }
+    }
 
     void Spawn ()
     {

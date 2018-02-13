@@ -18,18 +18,23 @@ public class Enemy : MonoBehaviour {
     public GameObject player;
     public float lifeTime;  // -1 for infinite time
     public float speed;
+    public EnemyManager enemyManager;
 
     // Use for initialing before Start
     void Awake()
     {
         tag = "Enemy";
         player = GameObject.FindGameObjectWithTag("Player");
+        enemyManager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
     }
 
     // Use this for initialization
     void Start () {
-		
-	}
+        if (enemyManager)
+        {
+            enemyManager.enemyList.Add(gameObject);
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -39,6 +44,15 @@ public class Enemy : MonoBehaviour {
             transform.Translate(targetV.normalized * speed * Time.deltaTime);
         }
 	}
+
+    void OnDestroy()
+    {
+        if (enemyManager)
+        {
+            enemyManager.enemyList.Remove(gameObject);
+            enemyManager.addKilledEnemiesAmount(1, type);
+        }
+    }
 
     public void TakeDamage(float d)
     {
