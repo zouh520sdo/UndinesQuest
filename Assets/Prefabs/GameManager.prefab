@@ -52,3 +52,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPaused: 0
+  targetEnemyAmount: 01000000020000000300000004000000
+  enemyManager: {fileID: 0}
