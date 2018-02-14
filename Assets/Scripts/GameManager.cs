@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
 
     public int[] targetEnemyAmount;
     public EnemyManager enemyManager;
+    [SerializeField]
     private int currentLevelIndex;
 
     private AudioSource audio;
@@ -38,14 +39,14 @@ public class GameManager : MonoBehaviour {
             Time.timeScale = 1f;
         }
 
-        if (currentLevelIndex >= targetEnemyAmount.Length)
+        if (currentLevelIndex - 1 >= targetEnemyAmount.Length)
         {
             return;
         }
 
-        if (enemyManager.totalKilledEnemiesAmount >= targetEnemyAmount[currentLevelIndex])
+        if (enemyManager.totalKilledEnemiesAmount >= targetEnemyAmount[currentLevelIndex-1])
         {
-            SceneManager.LoadScene((currentLevelIndex + 1) % SceneManager.sceneCountInBuildSettings);
+            SceneManager.LoadScene((currentLevelIndex + 1));
         }
     }
 }
