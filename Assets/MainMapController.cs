@@ -10,6 +10,7 @@ public class MainMapController : MonoBehaviour {
     public GameObject image;
     public GameObject button;
     public Text enemyCounter;
+    public Text desciption;
 
     void Awake()
     {
@@ -35,5 +36,6 @@ public class MainMapController : MonoBehaviour {
         enemyCounter.enabled = true;
         image.SetActive(false);
         button.SetActive(false);
+        desciption.enabled = false;
     }
 }

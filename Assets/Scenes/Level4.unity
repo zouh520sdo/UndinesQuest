@@ -197,6 +197,85 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9214c29026447044581d0ba32a563951, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &274555235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 274555236}
+  - component: {fileID: 274555238}
+  - component: {fileID: 274555237}
+  m_Layer: 5
+  m_Name: Description
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &274555236
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 274555235}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1806296267}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.030896554, y: 0.049000002}
+  m_AnchorMax: {x: 0.6852068, y: 0.5}
+  m_AnchoredPosition: {x: 2.5, y: -1.050003}
+  m_SizeDelta: {x: 5.800049, y: -0.8000183}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &274555237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 274555235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "\u201CIn 1986, the Chernobyl nuclear power plant caused the worst nuclear
+    disaster in history. It remains polluted with nuclear radiation to this day; it
+    is only second in radiation to the Fukushima nuclear disaster that occurred in
+    2011, which has not had as much time to dissipate.\r\nRadiation spread by these
+    events will gradually decay over time, but the radioactive isotopes still present
+    in the Chernobyl reactor will last for thousands of years.\u201D\r"
+--- !u!222 &274555238
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 274555235}
 --- !u!1 &304482054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,6 +1125,7 @@ RectTransform:
   - {fileID: 1030319749}
   - {fileID: 534070352}
   - {fileID: 404974967}
+  - {fileID: 274555236}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1070,6 +1150,7 @@ MonoBehaviour:
   image: {fileID: 1030319748}
   button: {fileID: 534070351}
   enemyCounter: {fileID: 404974968}
+  desciption: {fileID: 274555237}
 --- !u!1 &2142567052
 GameObject:
   m_ObjectHideFlags: 0
