@@ -11,10 +11,14 @@ public class GameManager : MonoBehaviour {
     public EnemyManager enemyManager;
     private int currentLevelIndex;
 
+    private AudioSource audio;
 	// Use this for initialization
 	void Start () {
         currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
         enemyManager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
+        audio = GetComponent<AudioSource>();
+
+        audio.Play();
     }
 	
 	// Update is called once per frame
