@@ -308,6 +308,7 @@
     <Compile Include="Assets\movement.cs" />
     <Compile Include="Assets\NuclearDestroyer.cs" />
     <Compile Include="Assets\penta.cs" />
+    <Compile Include="Assets\Scripts\CamaraManager.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyManager.cs" />
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />

@@ -63,12 +63,14 @@ public class movement : MonoBehaviour {
         if (pcd >= pencd) pcd = pencd;
         if (invinCountDown >= invinFrame) invinCountDown = invinFrame;
     }
-    private void OnTriggerStay2D(Collider2D collision)
+
+    
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.tag == "Enemy" && invinCountDown >= invinFrame)
+        if (collision.gameObject.tag == "Enemy" && invinCountDown >= invinFrame)
         {
             invinCountDown = 0f;
-            Enemy enemy = collision.GetComponent<Enemy>();
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             HP -= enemy.damage;
             if (enemy.type == Enemy.EnemyType.Nuclear)
             {

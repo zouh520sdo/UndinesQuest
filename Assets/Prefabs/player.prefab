@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 4232788824826662}
   - component: {fileID: 212427673463255042}
   - component: {fileID: 58975174362617422}
+  - component: {fileID: 114420552644930132}
   m_Layer: 0
   m_Name: shieldsp
   m_TagString: Untagged
@@ -145,7 +146,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -215,6 +216,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114420552644930132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1634520911677010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 292442f4310c59f4f869ef2481871b8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114622065741113060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,6 +251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3804e7bb68f65943817737f855cef96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 100
+  invinFrame: 1
   speed: 4
   shieldcd: 2
   pencd: 2
@@ -246,6 +260,8 @@ MonoBehaviour:
   sword: {fileID: 1425609548550480, guid: 1e349f11c1827e14c9366d9f8444d536, type: 2}
   pentagon: {fileID: 1541055635099880}
   shieldsp: {fileID: 1634520911677010}
+  shieldDuration: 1
+  shieldCounter: 0
   firerate: 0.2
   col: {fileID: 58975174362617422}
   b: 1
