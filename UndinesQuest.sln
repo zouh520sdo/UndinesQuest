@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UndinesQuest", "UndinesQuest.csproj", "{4A55DCB3-57B6-5E16-B2CE-F26663CEF6F9}"
 EndProject
 Global
