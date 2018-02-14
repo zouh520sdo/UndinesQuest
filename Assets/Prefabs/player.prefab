@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 114998240338769728}
   - component: {fileID: 58400962392373252}
   - component: {fileID: 95010073505653638}
+  - component: {fileID: 50001895456523004}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -75,7 +76,7 @@ GameObject:
   - component: {fileID: 212427673463255042}
   - component: {fileID: 58975174362617422}
   - component: {fileID: 114420552644930132}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shieldsp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,6 +138,26 @@ Transform:
   m_Father: {fileID: 4143787389022912}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50001895456523004
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331696570601664}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &58400962392373252
 CircleCollider2D:
   m_ObjectHideFlags: 1
