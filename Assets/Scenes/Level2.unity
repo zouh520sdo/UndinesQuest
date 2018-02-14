@@ -1108,7 +1108,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.06572414, y: 0.09826994}
   m_AnchorMax: {x: 0.71962065, y: 0.42333743}
-  m_AnchoredPosition: {x: 1.9092712, y: 0.26752}
+  m_AnchoredPosition: {x: 1.9092712, y: 0.2675171}
   m_SizeDelta: {x: 5.8, y: 0.53505}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1805081692
@@ -1134,14 +1134,14 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 1
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u201CThe Yangtze River is the largest river in Asia and the third-largest
     on the planet. China\u2019s agriculture depends significantly on the river. In
