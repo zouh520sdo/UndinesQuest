@@ -23,6 +23,7 @@ public class moveforward : MonoBehaviour {
     {
         if (gameObject.tag == "sword")
         {
+            if (collision.gameObject.GetComponent<Enemy>() == null) return;
             if (collision.gameObject.GetComponent<Enemy>().type == Enemy.EnemyType.Sediment)
             {
                 Debug.Log("melee hit");
