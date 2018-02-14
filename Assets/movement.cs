@@ -7,6 +7,7 @@ public class movement : MonoBehaviour {
     private float ospeed;
     public GameObject bullet;
     public GameObject sword;
+    public GameObject pentagon;
     public float firerate = 0.2f;
     private float fire = 0f;
     public bool b=true;
@@ -16,6 +17,7 @@ public class movement : MonoBehaviour {
     // Use this for initialization
     void Start () {
         ospeed = speed;
+        pentagon.SetActive(false);
 	}
 
     // Update is called once per frame
@@ -24,8 +26,13 @@ public class movement : MonoBehaviour {
         fire += Time.deltaTime;
         
     }
-    
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        
+    }
+
     void Update () {
+        
         if (notpen == false) { speed = 0; }
         else { speed = ospeed; }
         Vector2 moveDirection = new Vector2(0, 0);
@@ -39,18 +46,20 @@ public class movement : MonoBehaviour {
         if (moveDirection.x == 0 && moveDirection.y == 0) moveDirection.x = 1f;
         if (Input.GetKey("j") && fire >= 0.2f && b && notpen)
         {
-            Instantiate(bullet, transform.position+ (Vector3)moveDirection.normalized, Quaternion.AngleAxis(angle, Vector3.forward));
+            Instantiate(bullet, transform.position + (Vector3)moveDirection.normalized, Quaternion.AngleAxis(angle, Vector3.forward));
             fire = 0;
         }
         else if (Input.GetKey("l") && fire >= 0.2f && sw && notpen)
         {
-            Instantiate(sword, transform.position + (Vector3)moveDirection.normalized*1.2f, Quaternion.AngleAxis(angle, Vector3.forward));
+            Instantiate(sword, transform.position + (Vector3)moveDirection.normalized * 1.2f, Quaternion.AngleAxis(angle, Vector3.forward));
             fire = 0;
         }
-        else if (Input.GetKey("k") && fire >= 0.2f )
+        else if (Input.GetKey("k") && fire >= 0.2f)
         {
             notpen = false;
+            pentagon.GetComponent<penta>().active();
         }
-        else notpen = true;
-    }
+        else if (Input.GetKeyUp("k") && fire >= 0.2f) { notpen = true; pentagon.GetComponent<penta>().deactive(); fire = 0f; }
+        
+        }
 }
