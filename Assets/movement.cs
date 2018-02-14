@@ -100,7 +100,7 @@ public class movement : MonoBehaviour {
         }
         else if (Input.GetKey("l") && fire >= firerate && sw && notpen && notshield)
         {
-            Instantiate(sword, transform.position + (Vector3)moveDirection.normalized * 1.2f, Quaternion.AngleAxis(angle, Vector3.forward));
+            Instantiate(sword, transform.position + (Vector3)moveDirection.normalized*0.75f, Quaternion.AngleAxis(angle, Vector3.forward));
             fire = 0;
         }
         else if (Input.GetKey("k") && pcd >= pencd && p && notshield)
