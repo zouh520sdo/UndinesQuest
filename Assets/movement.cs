@@ -36,6 +36,10 @@ public class movement : MonoBehaviour {
     
     public static bool notpen = true;
     public static bool notshield = true;
+
+
+    private AudioSource shoot_audio;
+
     // Use this for initialization
     void Start () {
         ospeed = speed;
@@ -48,6 +52,7 @@ public class movement : MonoBehaviour {
 
         invinCountDown = invinFrame;
         shieldCounter = 0f;
+        shoot_audio = GetComponent<AudioSource>();
     }
 
 
@@ -95,6 +100,7 @@ public class movement : MonoBehaviour {
         if (moveDirection.x == 0 && moveDirection.y == 0) moveDirection.x = 1f;
         if (Input.GetKey("j") && fire >= firerate && b && notpen && notshield)
         {
+            shoot_audio.Play();
             Instantiate(bullet, transform.position + (Vector3)moveDirection.normalized, Quaternion.AngleAxis(angle, Vector3.forward));
             fire = 0;
         }
