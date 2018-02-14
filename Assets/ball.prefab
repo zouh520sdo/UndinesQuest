@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4136699468814918}
   - component: {fileID: 212570689441194538}
-  - component: {fileID: 58687633235946276}
   - component: {fileID: 50699167373134612}
   - component: {fileID: 114848512645439420}
+  - component: {fileID: 68240902586291302}
   m_Layer: 0
   m_Name: ball
   m_TagString: projectile
@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1846359870644322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 2.35, y: 0, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!58 &58687633235946276
-CircleCollider2D:
+--- !u!68 &68240902586291302
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -76,8 +76,15 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.1
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.286367, y: -0.05311213}
+  - {x: 0.19324102, y: 0.066406585}
+  - {x: 0.9077552, y: 0.43863532}
+  - {x: 1.3768711, y: -0.029801965}
+  - {x: 0.95005065, y: -0.43541908}
+  - {x: 0.22608317, y: -0.11778737}
+  - {x: -1.2736418, y: -0.0637346}
 --- !u!114 &114848512645439420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,8 +132,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.3897059, g: 0.6270425, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 2ad6bbd57762f9344b15fdc09ab5c648, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

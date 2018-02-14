@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4163818684210040}
   - component: {fileID: 114893334546387528}
   - component: {fileID: 212032881645818896}
-  - component: {fileID: 58522366210178064}
   - component: {fileID: 50120920194644876}
+  - component: {fileID: 68401978212249814}
   m_Layer: 0
   m_Name: Nuclear
   m_TagString: Enemy
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58522366210178064
-CircleCollider2D:
+--- !u!68 &68401978212249814
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -75,9 +75,20 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06073141, y: -0.09109783}
-  serializedVersion: 2
-  m_Radius: 2.920384
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.8668461, y: -1.4872881}
+  - {x: -2.6056156, y: -0.42266667}
+  - {x: -3.0335207, y: 0.276304}
+  - {x: -2.7251606, y: 1.0374514}
+  - {x: 0.1781683, y: 1.7062413}
+  - {x: 1.6014996, y: 0.79643834}
+  - {x: 2.8011189, y: 1.5825185}
+  - {x: 2.928505, y: -0.0022386312}
+  - {x: 1.7468548, y: 0.2927854}
+  - {x: 0.34896183, y: -0.8222586}
+  - {x: -1.8796148, y: -1.4684614}
 --- !u!114 &114893334546387528
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,7 +142,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1c71437fd0caf3d4fab0200b7bb37ade, type: 3}
-  m_Color: {r: 0.94482756, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

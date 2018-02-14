@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4638048402501706}
   - component: {fileID: 114227774545869372}
   - component: {fileID: 212214963264869034}
-  - component: {fileID: 58593348225113942}
   - component: {fileID: 50154447602334202}
+  - component: {fileID: 68329791888720368}
   m_Layer: 0
   m_Name: Sediment
   m_TagString: Enemy
@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1712779528451038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14608844, y: 0.054833915, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -3.72, y: 0.054833915, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58593348225113942
-CircleCollider2D:
+--- !u!68 &68329791888720368
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -76,8 +76,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.4
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -2.113319, y: 0.4560933}
+  - {x: -0.7211652, y: 0.5131948}
+  - {x: 0.14117289, y: -0.026945807}
+  - {x: 1.2243385, y: 0.8598389}
+  - {x: 2.5719137, y: 0.8242604}
+  - {x: 1.4281335, y: -0.18303657}
+  - {x: -0.5967803, y: -0.7708621}
+  - {x: -0.6310077, y: -1.4650753}
+  - {x: -2.2234797, y: -0.42097342}
+  - {x: -2.1669421, y: 0.4560935}
 --- !u!114 &114227774545869372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,8 +140,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 39ce16f31412cb8428625577db7a63c5, type: 3}
-  m_Color: {r: 0.034482718, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 9d3d1501b2898c743b4d42af388a9734, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

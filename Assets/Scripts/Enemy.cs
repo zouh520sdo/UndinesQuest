@@ -20,12 +20,15 @@ public class Enemy : MonoBehaviour {
     public float speed;
     public EnemyManager enemyManager;
 
+    private float scaleX; // for flip
+
     // Use for initialing before Start
     void Awake()
     {
         tag = "Enemy";
         player = GameObject.FindGameObjectWithTag("Player");
         enemyManager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
+        scaleX = Mathf.Abs(transform.localScale.x);
     }
 
     // Use this for initialization
@@ -42,6 +45,12 @@ public class Enemy : MonoBehaviour {
         {
             Vector2 targetV = player.transform.position - transform.position;
             transform.Translate(targetV.normalized * speed * Time.deltaTime);
+            if ((type == EnemyType.Sediment || type == EnemyType.Nuclear) && targetV.x != 0f)
+            {
+                Vector3 scale = transform.localScale;
+                scale.x = -scaleX * Mathf.Sign(targetV.x);
+                transform.localScale = scale;
+            }
         }
 	}
 
