@@ -303,6 +303,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\EnemyManager.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
+    <Compile Include="Assets\destroychem.cs" />
+>>>>>>> lol
     <Compile Include="Assets\moveforward.cs" />
     <Compile Include="Assets\movement.cs" />
     <Compile Include="Assets\penta.cs" />

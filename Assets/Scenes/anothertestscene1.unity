@@ -113,6 +113,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/anothertestscene1.unity
 --- !u!1001 &313024068
 Prefab:
   m_ObjectHideFlags: 0
@@ -174,28 +175,63 @@ GameObject:
   m_IsActive: 1
 --- !u!114 &427937415
 MonoBehaviour:
+=======
+--- !u!1001 &46575101
+Prefab:
+>>>>>>> lol:Assets/Scenes/anothertestscene.unity
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4641628921344328, guid: 9214c29026447044581d0ba32a563951, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641628921344328, guid: 9214c29026447044581d0ba32a563951, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641628921344328, guid: 9214c29026447044581d0ba32a563951, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641628921344328, guid: 9214c29026447044581d0ba32a563951, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641628921344328, guid: 9214c29026447044581d0ba32a563951, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641628921344328, guid: 9214c29026447044581d0ba32a563951, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641628921344328, guid: 9214c29026447044581d0ba32a563951, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641628921344328, guid: 9214c29026447044581d0ba32a563951, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9214c29026447044581d0ba32a563951, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &427937414 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1857580877183880, guid: 9214c29026447044581d0ba32a563951,
+    type: 2}
+  m_PrefabInternal: {fileID: 46575101}
+--- !u!58 &427937415
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 427937414}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3804e7bb68f65943817737f855cef96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
-  bullet: {fileID: 1846359870644322, guid: 6ec310c55960eaa44a05bb4d0cab65ec, type: 2}
-  sword: {fileID: 1425609548550480, guid: 1e349f11c1827e14c9366d9f8444d536, type: 2}
-  firerate: 0.2
-  b: 1
-  sw: 1
---- !u!212 &427937416
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 427937414}
-  m_Enabled: 1
+<<<<<<< HEAD:Assets/Scenes/anothertestscene1.unity
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -247,6 +283,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1
+>>>>>>> lol:Assets/Scenes/anothertestscene.unity
 --- !u!1001 &711421027
 Prefab:
   m_ObjectHideFlags: 0
@@ -284,11 +330,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4834651422485310, guid: 55c197612f04b65499bfc489540edc65, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55c197612f04b65499bfc489540edc65, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD:Assets/Scenes/anothertestscene1.unity
 --- !u!1001 &764529841
 Prefab:
   m_ObjectHideFlags: 0
@@ -416,6 +463,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 191dff922057d494c988428cc58b9460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> lol:Assets/Scenes/anothertestscene.unity
 --- !u!1 &1022908127
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,13 +554,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD:Assets/Scenes/anothertestscene1.unity
 --- !u!1001 &1027336337
+=======
+--- !u!1001 &1194367685
+>>>>>>> lol:Assets/Scenes/anothertestscene.unity
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD:Assets/Scenes/anothertestscene1.unity
     - target: {fileID: 4162439197458892, guid: 49977af04bbebd849af7402f22330906, type: 2}
       propertyPath: m_LocalPosition.x
       value: 8.02
@@ -548,12 +602,55 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: 49977af04bbebd849af7402f22330906, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1612186128
+=======
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.1538963
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.4388026
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766406039879460, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_Name
+      value: Chemicals (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1648141402
+>>>>>>> lol:Assets/Scenes/anothertestscene.unity
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD:Assets/Scenes/anothertestscene1.unity
     - target: {fileID: 4950532004558126, guid: 050b461b7c6cd1944a362c11b07d41ae, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -583,19 +680,57 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4950532004558126, guid: 050b461b7c6cd1944a362c11b07d41ae, type: 2}
+=======
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.0837417
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.28488657
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+>>>>>>> lol:Assets/Scenes/anothertestscene.unity
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD:Assets/Scenes/anothertestscene1.unity
   m_ParentPrefab: {fileID: 100100000, guid: 050b461b7c6cd1944a362c11b07d41ae, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1630716283
+=======
+  m_ParentPrefab: {fileID: 100100000, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1917407260
+>>>>>>> lol:Assets/Scenes/anothertestscene.unity
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD:Assets/Scenes/anothertestscene1.unity
     - target: {fileID: 4563208694514744, guid: a0fba5db94528c34f82a5476487226f9, type: 2}
       propertyPath: m_LocalPosition.x
       value: 8.25
@@ -630,4 +765,44 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0fba5db94528c34f82a5476487226f9, type: 2}
+=======
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.6013148
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.59447527
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605135584999400, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766406039879460, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+      propertyPath: m_Name
+      value: Chemicals (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 550284dff62f1394d901c67056b61db7, type: 2}
+>>>>>>> lol:Assets/Scenes/anothertestscene.unity
   m_IsPrefabParent: 0
