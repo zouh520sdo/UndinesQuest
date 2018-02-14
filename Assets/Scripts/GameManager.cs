@@ -15,28 +15,28 @@ public class GameManager : MonoBehaviour {
 	void Start () {
         currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
         enemyManager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
-        isPaused = false;
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (currentLevelIndex >= targetEnemyAmount.Length)
-        {
-            return;
-        }
-
         if (Input.GetKeyDown("p"))
         {
             isPaused = !isPaused;
-            if (isPaused)
-            {
-                Time.timeScale = 0f;
-            }
-            else
-            {
-                Time.timeScale = 1f;
-            }
+        }
+
+        if (isPaused)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
+
+        if (currentLevelIndex >= targetEnemyAmount.Length)
+        {
+            return;
         }
 
         if (enemyManager.totalKilledEnemiesAmount >= targetEnemyAmount[currentLevelIndex])

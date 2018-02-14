@@ -304,6 +304,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\destroychem.cs" />
+    <Compile Include="Assets\MainMapController.cs" />
     <Compile Include="Assets\moveforward.cs" />
     <Compile Include="Assets\movement.cs" />
     <Compile Include="Assets\NuclearDestroyer.cs" />
