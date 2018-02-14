@@ -17,7 +17,7 @@ public class destroychem : MonoBehaviour {
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.GetComponent<Enemy>() == null) return;
         if (collision.gameObject.GetComponent<Enemy>().type == Enemy.EnemyType.Chemicals)
         {
             Debug.Log("alchem hit");
