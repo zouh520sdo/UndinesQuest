@@ -21,9 +21,9 @@ public class moveforward : MonoBehaviour {
 	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.GetComponent<Enemy>() == null) return;
         if (gameObject.tag == "sword")
         {
-            if (collision.gameObject.GetComponent<Enemy>() == null) return;
             if (collision.gameObject.GetComponent<Enemy>().type == Enemy.EnemyType.Sediment)
             {
                 Debug.Log("melee hit");
