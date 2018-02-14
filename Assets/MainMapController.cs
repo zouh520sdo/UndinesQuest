@@ -27,7 +27,7 @@ public class MainMapController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        enemyCounter.text = enemyManager.totalKilledEnemiesAmount.ToString();
+        enemyCounter.text = enemyManager.totalKilledEnemiesAmount.ToString() + " (Goal: " + gameManager.getGoal() + ")";
     }
 
     public void StartGame()

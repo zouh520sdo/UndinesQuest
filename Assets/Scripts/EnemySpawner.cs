@@ -27,7 +27,7 @@ public class EnemySpawner : MonoBehaviour {
         {
             enemyManager.spawnerList.Add(this);
         }
-        timestamp = Time.time;
+        timestamp = Time.time - 3f;
 	}
 	
 	// Update is called once per frame

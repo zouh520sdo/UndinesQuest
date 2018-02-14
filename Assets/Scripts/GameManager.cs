@@ -49,4 +49,9 @@ public class GameManager : MonoBehaviour {
             SceneManager.LoadScene((currentLevelIndex + 1));
         }
     }
+
+    public int getGoal()
+    {
+        return targetEnemyAmount[currentLevelIndex - 1];
+    }
 }
