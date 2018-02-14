@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class movement : MonoBehaviour {
+    public float HP = 100f;
+    public float invinFrame = 1f;
+    private float invinCountDown;
     public float speed;
     public float shieldcd = 0.1f;
     public float pencd = 2f;
@@ -11,6 +14,8 @@ public class movement : MonoBehaviour {
     public GameObject sword;
     public GameObject pentagon;
     public GameObject shieldsp;
+    public float shieldDuration = 1f;
+    public float shieldCounter;
     public float firerate = 0.2f;
     private float fire = 0f;
     private float cd = 0f;
@@ -40,22 +45,36 @@ public class movement : MonoBehaviour {
         fire = firerate;
         cd = shieldcd;
         pcd = pencd;
+
+        invinCountDown = invinFrame;
+        shieldCounter = 0f;
     }
 
 
     // Update is called once per frame
     private void FixedUpdate()
     {
+        invinCountDown += Time.deltaTime;
         fire += Time.deltaTime;
         cd+= Time.deltaTime;
         pcd+= Time.deltaTime;
         if (fire>=firerate) fire = firerate;
         if (cd >= shieldcd) cd = shieldcd;
         if (pcd >= pencd) pcd = pencd;
+        if (invinCountDown >= invinFrame) invinCountDown = invinFrame;
     }
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        
+        if (collision.tag == "Enemy" && invinCountDown >= invinFrame)
+        {
+            invinCountDown = 0f;
+            Enemy enemy = collision.GetComponent<Enemy>();
+            HP -= enemy.damage;
+            if (enemy.type == Enemy.EnemyType.Nuclear)
+            {
+                Destroy(enemy.gameObject);
+            }
+        }
     }
 
     void Update () {
@@ -88,18 +107,20 @@ public class movement : MonoBehaviour {
             pentagon.GetComponent<penta>().active();
         }
         else if (Input.GetKeyUp("k") && pcd >= pencd && p && notshield) { notpen = true; pentagon.GetComponent<penta>().deactive(); pcd = 0f; }
-        else if (Input.GetKey("i") && cd >= shieldcd && s)
+        else if (Input.GetKey("i") && cd >= shieldcd && s && shieldCounter < shieldDuration)
         {
             notshield = false;
             shieldsp.SetActive(true);
             col.enabled = true;
+            shieldCounter += Time.deltaTime;
         }
-        else if (Input.GetKeyUp("i") && cd >= shieldcd && s)
+        else if (Input.GetKeyUp("i") && cd >= shieldcd && s || shieldCounter >= shieldDuration)
         {
             notshield = true;
             shieldsp.SetActive(false);
             col.enabled = false;
             cd = 0f;
+            shieldCounter = 0f;
         }
     }
 
