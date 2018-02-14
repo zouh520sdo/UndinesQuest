@@ -30,6 +30,7 @@ public class movement : MonoBehaviour {
     }
     
     public static bool notpen = true;
+    public static bool notshield = true;
     // Use this for initialization
     void Start () {
         ospeed = speed;
@@ -58,6 +59,7 @@ public class movement : MonoBehaviour {
     }
 
     void Update () {
+        if (Time.timeScale <= 0) { return; }
         
         if (notpen == false) { speed = 0; }
         else { speed = ospeed; }
@@ -70,29 +72,31 @@ public class movement : MonoBehaviour {
         Vector2 moveDirection2 = moveDirection.normalized;
         float angle = Mathf.Atan2(moveDirection2.y, moveDirection2.x) * Mathf.Rad2Deg;
         if (moveDirection.x == 0 && moveDirection.y == 0) moveDirection.x = 1f;
-        if (Input.GetKey("j") && fire >= firerate && b && notpen)
+        if (Input.GetKey("j") && fire >= firerate && b && notpen && notshield)
         {
             Instantiate(bullet, transform.position + (Vector3)moveDirection.normalized, Quaternion.AngleAxis(angle, Vector3.forward));
             fire = 0;
         }
-        else if (Input.GetKey("l") && fire >= firerate && sw && notpen)
+        else if (Input.GetKey("l") && fire >= firerate && sw && notpen && notshield)
         {
             Instantiate(sword, transform.position + (Vector3)moveDirection.normalized * 1.2f, Quaternion.AngleAxis(angle, Vector3.forward));
             fire = 0;
         }
-        else if (Input.GetKey("k") && pcd >= pencd && p)
+        else if (Input.GetKey("k") && pcd >= pencd && p && notshield)
         {
             notpen = false;
             pentagon.GetComponent<penta>().active();
         }
-        else if (Input.GetKeyUp("k") && pcd >= pencd && p) { notpen = true; pentagon.GetComponent<penta>().deactive(); pcd = 0f; }
+        else if (Input.GetKeyUp("k") && pcd >= pencd && p && notshield) { notpen = true; pentagon.GetComponent<penta>().deactive(); pcd = 0f; }
         else if (Input.GetKey("i") && cd >= shieldcd && s)
         {
+            notshield = false;
             shieldsp.SetActive(true);
             col.enabled = true;
         }
         else if (Input.GetKeyUp("i") && cd >= shieldcd && s)
         {
+            notshield = true;
             shieldsp.SetActive(false);
             col.enabled = false;
             cd = 0f;
